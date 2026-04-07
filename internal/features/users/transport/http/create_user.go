@@ -1,0 +1,26 @@
+package user_transport_http
+
+import (
+	"encoding/json"
+	"log"
+	"net/http"
+)
+
+type CreateUserRequest struct {
+	FullName    string  `json:"full_name"`
+	PhoneNumber *string `json:"phone_number"`
+}
+
+type CreateUserResponse struct {
+	ID          int `json:"id"`
+	Version     int `json:"version"`
+	FullName    int `json:"full_number"`
+	PhoneNumber int `json:"phone_number"`
+}
+
+func (h *UserHTTPHandler) CreateUser(rw http.ResponseWriter, r *http.Request) {
+	var request CreateUserRequest
+	json.NewDecoder(r.Body).Decode(&request); err!= nil {
+		log.
+	}
+}
